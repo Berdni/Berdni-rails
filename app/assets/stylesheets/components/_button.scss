@@ -1,0 +1,39 @@
+.button {
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  height: 34px;
+  text-shadow: none;
+
+  svg {
+    align-self: center;
+    padding-right: 5px;
+  }
+
+  span {
+    align-self: center;
+  }
+}
+
+.button_primary {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+
+  svg {
+    fill: var(--color-white);
+  }
+}
+
+.button_contrast-lower {
+  background-color: var(--color-contrast-button);
+  border: 1px solid var(--color-contrast-low);
+  color: var(--color-contrast-higher);
+  svg {
+    fill: var(--color-contrast-higher);
+  }
+}

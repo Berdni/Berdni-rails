@@ -1,0 +1,33 @@
+.profile
+  .profile__avatar
+    picture
+      source srcset="/assets/avatar.webp" type="image/webp"
+      img src="/assets/avatar.jpg" alt="Аватар"
+  h1.profile__username Бердников Константин
+  .profile__details
+    p.profile__line Ruby on Rails разработчик
+    p.profile__line
+      a href="https://github.com/berdni" target="_blank" github.com/berdni
+    p.profile__line @berdni
+  .profile__group-button
+    a.button.button_primary href="https://twitter.com/berdnidz3" target="_blank"
+      = inline_svg 'icons/twitter.svg', size: '20px'
+      span Подписаться
+    a.button.button_contrast-lower href="https://twitter.com/berdnidz3" target="_blank"
+      span Написать
+  .profile__title Образование
+  span.profile__text
+    | 2017-2021г. Студент 4 курса бакалавриата автоматики и вычислительной
+        техники Новосибирского государственного технического университета
+  .profile__title Мои проекты
+  span.profile__text
+    a> href="https://mobile-pw.ru/" Mobile-pw
+    | - фансайт посвященный мобильной игре Perfect World Mobile
+  a href="https://github.com/berdni"
+    = inline_svg 'icons/github.svg', size: '20px', class: 'svg-contrast'
+  a href="https://t.me/BeKonich"
+    = inline_svg 'icons/telegram.svg', size: '20px', class: 'svg-contrast'
+  a href="https://vk.com/rk300"
+    = inline_svg 'icons/vk.svg', size: '20px', class: 'svg-contrast'
+  a href="https://twitter.com/berdnidz3"
+    = inline_svg 'icons/twitter.svg', size: '20px', class: 'svg-contrast'

@@ -1,0 +1,172 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ *, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* * {
+  font: inherit;
+} */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root, [data-theme="default"] {
+  --color-primary: rgb(67, 133, 208);
+  --color-primary-r: 67;
+  --color-primary-g: 133;
+  --color-primary-b: 208;
+  --color-primary-darker: rgb(45, 108, 180);
+  --color-primary-darker-r: 45;
+  --color-primary-darker-g: 108;
+  --color-primary-darker-b: 180;
+  --color-bg: rgb(249, 249, 249);
+  --color-bg-r: 249;
+  --color-bg-g: 249;
+  --color-bg-b: 249;
+  --color-shadow: rgba(67, 133, 208, 0.2);
+  --color-white: rgb(255, 255, 255);
+  --color-white-r: 255;
+  --color-white-g: 255;
+  --color-white-b: 255;
+  --color-black: rgb(0, 0, 0);
+  --color-contrast-lower: rgb(255, 255, 255);
+  --color-contrast-lower-r: 255;
+  --color-contrast-lower-g: 255;
+  --color-contrast-lower-b: 255;
+  --color-contrast-low: rgb(211, 211, 211);
+  --color-contrast-low-r: 211;
+  --color-contrast-low-g: 211;
+  --color-contrast-low-b: 211;
+  --color-contrast-medium: rgb(121, 121, 121);
+  --color-contrast-medium-r: 121;
+  --color-contrast-medium-g: 121;
+  --color-contrast-medium-b: 121;
+  --color-contrast-high:rgb(49, 49, 49);
+  --color-contrast-high-r: 49;
+  --color-contrast-high-g: 49;
+  --color-contrast-high-b: 49;
+  --color-contrast-higher:rgb(28, 28, 28);
+  --color-contrast-higher-r: 28;
+  --color-contrast-higher-g: 28;
+  --color-contrast-higher-b: 28;
+  --color-contrast-button: rgb(255, 255, 255);
+}
+
+@supports (--css: variables) {
+  [data-theme="dark"] {
+    --color-primary: rgb(255, 140, 0);
+    --color-primary-r: 255;
+    --color-primary-g: 140;
+    --color-primary-b: 0;
+    --color-primary-darker: rgb(219, 121, 0);
+    --color-primary-darker-r: 219;
+    --color-primary-darker-g: 121;
+    --color-primary-darker-b: 0;
+    --color-bg: rgb(19, 23, 29);
+    --color-bg-r: 19;
+    --color-bg-g: 23;
+    --color-bg-b: 29;
+    --color-shadow: rgba(48, 53, 65, 0.2);
+    --color-white: rgb(255, 255, 255);
+    --color-white-r: 255;
+    --color-white-g: 255;
+    --color-white-b: 255;
+    --color-black: rgb(0, 0, 0);
+    --color-contrast-lower: rgb(24, 28, 33);
+    --color-contrast-lower-r: 24;
+    --color-contrast-lower-g: 28;
+    --color-contrast-lower-b: 33;
+    --color-contrast-low: rgb(29, 33, 42);
+    --color-contrast-low-r: 29;
+    --color-contrast-low-g: 33;
+    --color-contrast-low-b: 42;
+    --color-contrast-medium: rgb(48, 53, 65);
+    --color-contrast-medium-r: 48;
+    --color-contrast-medium-g: 53;
+    --color-contrast-medium-b: 65;
+    --color-contrast-high: rgb(165, 165, 165);
+    --color-contrast-high-r: 165;
+    --color-contrast-high-g: 165;
+    --color-contrast-high-b: 165;
+    --color-contrast-higher: rgb(255, 255, 255);
+    --color-contrast-higher-r: 255;
+    --color-contrast-higher-g: 255;
+    --color-contrast-higher-b: 255;
+    --color-contrast-button: rgb(48, 53, 65);;
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: -apple-system,
+  BlinkMacSystemFont,
+  Roboto,
+  Helvetica Neue,
+  sans-serif;
+}
+
+section {
+  padding: 0 15px;
+}
+
+.svg-contrast {
+  fill: var(--color-contrast-higher);
+}
+
+@media (min-width: 575.98px){
+  section {
+    padding: 0 calc(50% - 270px);
+  }
+}
+
+@media (min-width: 767.98px){
+  section {
+    padding: 0 calc(50% - 360px);
+  }
+}
+
+@media (min-width: 991.98px) {
+  section {
+    padding: 0 calc(50% - 480px);
+  }
+}
+
+@media (min-width: 1199.98px){
+  section {
+    padding: 0 calc(50% - 590px);
+  }
+}

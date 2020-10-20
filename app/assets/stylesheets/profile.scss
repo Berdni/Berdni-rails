@@ -1,0 +1,72 @@
+.profile {
+  background-color: var(--color-contrast-lower);
+  border-radius: 3px;
+  padding: 25px;
+  box-shadow: 0 0 3px var(--color-shadow);
+
+  &__avatar {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+      border: 2px solid var(--color-primary);
+    }
+  }
+
+  &__username {
+    text-align: center;
+    color: var(--color-contrast-higher);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    white-space: nowrap;
+  }
+
+  &__details {
+    color: var(--color-contrast-high);
+    margin-bottom: 15px;
+    text-align: center;
+
+    a {
+      color: var(--color-contrast-high);
+      text-decoration: underline;
+    }
+  }
+
+  &__line {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  &__group-button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    color: var(--color-contrast-higher);
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    display: block;
+    color: var(--color-contrast-higher);
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+
+    a {
+      color: var(--color-contrast-higher);
+    }
+  }
+}

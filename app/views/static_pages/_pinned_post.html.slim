@@ -1,0 +1,28 @@
+.post
+  .post__pin
+    = inline_svg 'icons/pin.svg', size: '15px'
+    | Закрепленный пост
+  .post__grid
+    .post__avatar
+      picture
+        source srcset="/assets/avatar.webp" type="image/webp"
+        img src="/assets/avatar.jpg" alt="Аватар"
+    .post__username
+      | Бердников Константин
+    .post__text
+      span Мои навыки:
+      ul
+        li
+          | <b>Ruby</b> 2 и новее
+        li
+          | <b>Ruby on Rails</b> 4.0 и новее
+        li
+          | <b>SQL, Redis</b>
+        li
+          | <b>HTML, SLIM, CSS/SCSS, JavaScript</b> для простого фронтенда
+        li
+          | <b>Nginx</b> и <b>Puma</b> для запуска приложений
+        li
+          | <b>Heroku</b> или <b>VPS</b> для развертвывания приложений
+        li
+          | Некоторый опыт работы с <b>React</b>

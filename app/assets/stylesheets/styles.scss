@@ -1,0 +1,20 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.page {
+  flex: 1 1 auto;
+
+  &__container {
+    display: flex;
+  }
+
+  &__side {
+    flex: 0 0 360px
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    padding: 0 0 0 30px;
+  }
+}
