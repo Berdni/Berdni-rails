@@ -1,0 +1,18 @@
+header.header
+  = inline_svg 'icons/sun.svg', size: '15px', class: 'svg-contrast'
+  .switch.header__switch
+      input.switch__input type="checkbox" id="themeSwitch"
+      label.switch__label aria-hidden="true" for="themeSwitch" on
+      .switch__marker aria-hidden="true"
+  = inline_svg 'icons/moon.svg', size: '14px', class: 'svg-contrast'
+  .header__right
+    - if current_user
+      .header__avatar
+        img src='#{current_user.avatar}'
+      = link_to logout_path, method: :delete, class: :header__exit do
+        = inline_svg 'icons/door.svg', size: '25px', class: 'svg-contrast'
+    - else
+      .header__auth
+        a.button.button_primary href="/auth/vkontakte"
+          = inline_svg 'icons/vk.svg', size: '20px'
+          span Войти

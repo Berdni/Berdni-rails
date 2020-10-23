@@ -3,18 +3,22 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .page {
-  flex: 1 1 auto;
-
   &__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    column-gap: 30px;
   }
+}
 
-  &__side {
-    flex: 0 0 360px
-  }
+@media (max-width: 991.98px) {
+  .page {
+    &__container {
+      display: block;
+      column-gap: 0;
+    }
 
-  &__content {
-    flex: 1 1 auto;
-    padding: 0 0 0 30px;
+    &__side {
+      margin-bottom: 15px;
+    }
   }
 }

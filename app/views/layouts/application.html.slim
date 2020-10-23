@@ -11,13 +11,7 @@ html
     == javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
-    = link_to 'VK', '/auth/vkontakte'
-    - if current_user
-      = current_user.name
-    .switch
-      input.switch__input type="checkbox" id="themeSwitch"
-      label.switch__label aria-hidden="true" for="themeSwitch" on
-      .switch__marker aria-hidden="true"
+    == render 'layouts/header'
     section.page
       .page__container
         aside.page__side
