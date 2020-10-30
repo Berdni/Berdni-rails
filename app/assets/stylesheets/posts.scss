@@ -3,6 +3,10 @@
   border-bottom: 1px solid var(--color-shadow);
   padding: 15px 30px;
 
+  &__block {
+    display: flex;
+  }
+
   &__pin {
     color: var(--color-contrast-high);
     font-size: 11px;
@@ -14,17 +18,12 @@
     }
   }
 
-  &__grid {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    gap: 0 15px;
-    grid-template-areas:
-    "avatar username"
-    "avatar text";
+  &__right {
+    width: 100%;
+    padding-left: 15px;
   }
 
   &__avatar {
-    grid-area: avatar;
     width: 50px;
     height: 50px;
 
@@ -35,14 +34,12 @@
   }
 
   &__username {
-    grid-area: username;
     color: var(--color-contrast-higher);
     font-weight: 600;
     font-size: 13px;
   }
 
   &__text {
-    grid-area: text;
     font-size: 13px;
     color: var(--color-contrast-higher);
     
@@ -54,10 +51,45 @@
       list-style: inside;
     }
   }
+
+  &__input {
+    width: 100%;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    background: transparent;
+    resize: none;
+    font-size: 15px;
+    color: var(--color-contrast-higher);
+    display: block;
+    overflow: hidden;
+  }
+
+  &__button {
+    border: 0;
+    height: 27px;
+    padding: 0 10px;
+  }
+
+  &__action {
+    padding-top: 5px;
+
+    a {
+      font-size: 11px;
+      color: var(--color-contrast-high);
+      cursor: pointer;
+    }
+  }
 }
 
 @media (max-width: 575.98px){
   .post {
+    padding: 15px 10px;
+  }
+
+  .form {
     padding: 15px 10px;
   }
 }
