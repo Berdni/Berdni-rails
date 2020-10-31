@@ -4,6 +4,7 @@ lock "~> 3.14.1"
 set :linked_files, fetch(:linked_files, []).push("config/master.key")
 set :application, "berdni"
 set :repo_url, "git@github.com:Berdni/Berdni-rails.git"
+set :branch, "main"
 
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"
