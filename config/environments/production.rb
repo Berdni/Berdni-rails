@@ -40,7 +40,7 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
-  config.action_cable.url = 'wss://80.249.146.112:4001//cable'
+  config.action_cable.url = 'wss://80.249.146.112:4001/cable'
   config.action_cable.allowed_request_origins = ['*']
   # config.action_cable.disable_request_forgery_protection = true
 
