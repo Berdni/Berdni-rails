@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount ActionCable.server => "/cable"
+
   root 'posts#index'
   resources :posts, only: %i[index create destroy]
 
