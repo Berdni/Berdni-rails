@@ -8,7 +8,7 @@
         = post.user.name
       .post__text
         = post.body
-      - if can? :manage, post
+      - if can?(:manage, post) && editable
         .post__action
           = link_to 'Удалить', post_path(post),
             method: :delete, data: { confirm: 'Вы уверены?' }

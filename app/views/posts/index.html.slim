@@ -1,4 +1,5 @@
 .feed
-  = render 'form'
+  - if current_user
+    = render 'form'
   = render 'pinned_post'
-  = render @posts
+  = render partial: 'post', collection: @posts, locals: { editable: true }

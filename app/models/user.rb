@@ -10,10 +10,11 @@ class User < ApplicationRecord
   end
 
   def self.find_or_create_from_auth_hash(auth_hash)
+    puts auth_hash
     user = where(provider: auth_hash.provider, uid: auth_hash.uid).first_or_create
     user.update(
       name: auth_hash.info.name,
-      avatar: auth_hash.info.image
+      avatar: auth_hash.extra.raw_info.photo_400_orig
     )
     user
   end
