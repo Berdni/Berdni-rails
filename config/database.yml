@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: berdni_production
-  username: berdni
-  password: <%= ENV['BERDNI_DATABASE_PASSWORD'] %>
+  username: Rails.application.credentials.db_username!
+  password: Rails.application.credentials.db_password!
