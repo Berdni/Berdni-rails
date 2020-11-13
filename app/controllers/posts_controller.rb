@@ -14,7 +14,7 @@ class PostsController < ApplicationController
       cable_ready['feed'].insert_adjacent_html(
         selector: '#pinned-post',
         position: 'afterend',
-        html: render_to_string(partial: 'post', locals: { post: @post })
+        html: render_to_string(partial: 'post', locals: { post: @post, editable: false })
       )
       cable_ready.broadcast
       redirect_to root_path

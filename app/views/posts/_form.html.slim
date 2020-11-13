@@ -1,12 +1,11 @@
 = form_with model: @post, local: true,
   html: { class: 'post', 'data-controller': 'posts' } do |form|
-  - if current_user
-    .post__block
-      .post__left
-        .post__avatar
-          img src='#{current_user.avatar}'
-      .post__right
-        = form.text_area :body, placeholder: 'Поделитесь мнением',
-          class: 'post__input', 'data-action': 'input->posts#validate'
-        = form.submit 'Отправить', class: 'post__button button button_primary',
-          disabled: true, 'data-target': 'posts.submit'
+  .post__block
+    .post__left
+      .post__avatar
+        img src='#{current_user.avatar}'
+    .post__right
+      = form.text_area :body, placeholder: 'Поделитесь мнением',
+        class: 'post__input', 'data-action': 'input->posts#validate'
+      = form.submit 'Отправить', class: 'post__button button button_primary',
+        disabled: true, 'data-target': 'posts.submit'
