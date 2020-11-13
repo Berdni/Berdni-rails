@@ -36,3 +36,5 @@ yarn-debug.log*
 .yarn-integrity
 
 *.Identifier
+coverage
+deep_cover
