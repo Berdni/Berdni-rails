@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
 
-  has_many :post, dependent: :destroy
+  has_many :posts, dependent: :destroy
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
