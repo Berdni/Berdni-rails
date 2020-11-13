@@ -70,3 +70,18 @@
     }
   }
 }
+
+@media (max-width: 575.98px){
+  .profile {
+    padding: 20px 10px;
+    
+    .button {
+      font-size: 11px;
+      height: 30px;
+    }
+
+    &__username {
+      font-size: 18px;
+    }
+  }
+}

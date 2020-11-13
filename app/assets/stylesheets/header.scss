@@ -1,0 +1,40 @@
+.header {
+  height: 55px;
+  width: 100%;
+  background-color: var(--color-contrast-lower);
+  box-shadow: 0 0 3px var(--color-shadow);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__auth {
+    width: 100px;
+  }
+
+  &__switch {
+    margin: 0 5px;
+  }
+
+  &__right {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    height: 35px;
+    width: 35px;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+      border: 2px solid var(--color-primary);
+    }
+  }
+
+  &__exit {
+    padding-left: 5px;
+    padding-top: 4px;
+  }
+}
