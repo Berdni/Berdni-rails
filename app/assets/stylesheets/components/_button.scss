@@ -37,3 +37,8 @@
     fill: var(--color-contrast-higher);
   }
 }
+
+.button:disabled {
+  background-color: var(--color-shadow);
+  cursor: default;
+}
