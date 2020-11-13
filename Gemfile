@@ -27,6 +27,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'inline_svg', '~> 0.11.1'
 gem 'omniauth-vkontakte'
+gem 'cancancan'
 gem 'slim'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -56,3 +57,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "redis", "~> 4.2"
+gem "cable_ready", "~> 4.3"
+gem "stimulus_reflex", "~> 3.3"
