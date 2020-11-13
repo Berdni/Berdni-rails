@@ -10,6 +10,12 @@
   }
 }
 
+p.notice {
+  padding: 15px 30px;
+  font-size: 13px;
+  color: var(--color-contrast-higher);
+}
+
 @media (max-width: 991.98px) {
   .page {
     &__container {
