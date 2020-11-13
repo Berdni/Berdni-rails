@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Berdni
+    == csrf_meta_tags
+    == csp_meta_tag
+
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    link rel="shortcut icon" type="image/png" href="/favicon.png"
+
+    == stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    == javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body
+    == render 'layouts/header'
+    section.page
+      .page__container
+        aside.page__side
+          == render 'layouts/profile'
+        .page__content
+            == yield
