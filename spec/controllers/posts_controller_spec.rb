@@ -20,6 +20,12 @@ RSpec.describe PostsController do
       expect(assigns(:posts)).to eq([post_with_user])
     end
 
+    it 'posts in needed order' do
+      FactoryBot.create(:user_with_posts)
+      get :index
+      expect(assigns(:posts)).to eq(Post.all.order(created_at: :desc))
+    end
+
     it 'assigns a new post' do
       get :index
       expect(assigns(:post)).to be_a_new(Post)
@@ -27,20 +33,25 @@ RSpec.describe PostsController do
   end
 
   describe 'POST #create' do
+    let(:post_params) { FactoryBot.attributes_for(:post) }
+
     context 'authenticated user' do
       before(:each) do
         log_in user
       end
 
       it 'creates a new post with valid params' do
-        post_params = FactoryBot.attributes_for(:post)
         expect {
           post :create, params: { post: post_params }
         }.to change(Post, :count).by(1)
       end
 
+      it 'current user is owner of post' do
+        post :create, params: { post: post_params }
+        expect(assigns(:post).user).to eq(user)
+      end
+
       it 'redirects to the root_path' do
-        post_params = FactoryBot.attributes_for(:post)
         post :create, params: { post: post_params }
         expect(response).to redirect_to(root_path)
       end
@@ -60,7 +71,6 @@ RSpec.describe PostsController do
 
     context 'not authenticated user' do
       it 'not creates a new post with valid params' do
-        post_params = FactoryBot.attributes_for(:post)
         expect {
           post :create, params: { post: post_params }
         }.to raise_error(CanCan::AccessDenied)
