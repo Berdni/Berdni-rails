@@ -13,6 +13,6 @@ header.header
         = inline_svg 'icons/door.svg', size: '25px', class: 'svg-contrast'
     - else
       .header__auth
-        a.button.button_primary href="/auth/vkontakte"
+        = link_to '/auth/vkontakte', method: :post, class: 'button button_primary' do
           = inline_svg 'icons/vk.svg', size: '20px'
           span Войти

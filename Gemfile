@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+ruby '2.7.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
@@ -25,9 +25,10 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem 'inline_svg', '~> 0.11.1'
-gem 'omniauth-vkontakte'
 gem 'cancancan'
+gem 'inline_svg', '~> 0.11.1'
+gem 'omniauth-rails_csrf_protection'
+gem 'omniauth-vkontakte'
 gem 'slim'
 
 # Reduces boot times through caching; required in config/boot.rb
